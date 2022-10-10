@@ -14,10 +14,10 @@ public class Launcher {
                 Simulation simulation = new Simulation(humanPlayer);
 
                 SecureRandom random = new SecureRandom();
-                long randomNumber = random.nextInt(1000);
-                System.out.println(randomNumber);
+                long randomNumber = random.nextInt(100);
+                logger.log(String.valueOf(randomNumber));
 
-                simulation.initialize(randomNumber, Long.parseLong(args[1])+1);
+                simulation.initialize(randomNumber);
                 simulation.loopUntilPlayerSucceed(Long.parseLong(args[1])+1);
             }
             else if (args[0].equals("-auto")) {
@@ -26,9 +26,9 @@ public class Launcher {
 
                 SecureRandom random = new SecureRandom();
                 long randomNumber = random.nextLong(1000);
-                System.out.println(randomNumber);
+                logger.log(String.valueOf(randomNumber));
 
-                simulation.initialize(randomNumber, Long.parseLong(args[1]));
+                simulation.initialize(randomNumber);
                 simulation.loopUntilPlayerSucceed(MAX_ITE);
             }
         }
