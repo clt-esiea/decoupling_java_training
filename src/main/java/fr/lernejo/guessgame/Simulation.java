@@ -63,5 +63,6 @@ public class Simulation {
         Date timeExecValue = new Date(timeExec);
         logger.log("Time execution -> " + dForm.format(timeExecValue));
         logger.log("Number of tries -> " + count);
+        logger.log("win");
     }
 }
