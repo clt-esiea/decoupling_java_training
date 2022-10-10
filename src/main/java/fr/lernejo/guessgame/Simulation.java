@@ -64,5 +64,6 @@ public class Simulation {
         logger.log("Time execution -> " + dForm.format(timeExecValue));
         logger.log("Number of tries -> " + count);
         logger.log("win");
+        logger.log("done");
     }
 }
