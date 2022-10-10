@@ -15,10 +15,9 @@ public class Launcher {
 
                 SecureRandom random = new SecureRandom();
                 long randomNumber = random.nextInt(100);
-                logger.log(String.valueOf(randomNumber));
 
                 simulation.initialize(randomNumber);
-                simulation.loopUntilPlayerSucceed(Long.parseLong(args[1])+1);
+                simulation.loopUntilPlayerSucceed(Long.parseLong(args[1]));
             }
             else if (args[0].equals("-auto")) {
                 ComputerPlayer computerPlayer = new ComputerPlayer();

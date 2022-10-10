@@ -9,9 +9,10 @@ public class HumanPlayer implements Player{
 
     @Override
     public long askNextGuess() {
-        System.out.println("Enter a number : ");
         Scanner scanner = new Scanner(System.in);
-        int askUserNumber = scanner.nextInt();
+        logger.log("Enter a number : ");
+
+        long askUserNumber = scanner.nextLong();
         logger.log(String.valueOf(askUserNumber));
         return askUserNumber;
     }

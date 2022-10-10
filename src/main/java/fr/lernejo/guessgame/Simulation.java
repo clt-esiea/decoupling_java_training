@@ -13,7 +13,6 @@ public class Simulation {
     private final Logger logger = LoggerFactory.getLogger("simulation");
     private final Player player;  //TODO add variable type
     private long numberToGuess; //TODO add variable type
-    private int tryNbr;
 
     public Simulation(Player player) {
         this.player=player;
@@ -50,10 +49,15 @@ public class Simulation {
         boolean game = false;
         long timeExec = 0;
         long startT = System.currentTimeMillis();
+        while(!game && count<maxValue) {
+            game = nextRound();
+            count++;
+        }
+        /*
         do {
             game = nextRound();
             count++;
-        } while(!game && count<maxValue);
+        } while(!game && count<maxValue);*/
         long endT = System.currentTimeMillis();
         timeExec = endT - startT;
         Date timeExecValue = new Date(timeExec);
