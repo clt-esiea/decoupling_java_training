@@ -13,7 +13,7 @@ public class HumanPlayer implements Player{
         Scanner scanner = new Scanner(System.in);
         int askUserNumber = scanner.nextInt();
         logger.log(String.valueOf(askUserNumber));
-        return 0;
+        return askUserNumber;
     }
 
     @Override
