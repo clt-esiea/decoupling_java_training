@@ -25,7 +25,7 @@ public class Simulation {
      */
     private boolean nextRound(int i) {
 
-        System.out.println("("+i+") Enter a number : ");
+        System.out.println("Enter a number : ");
         Scanner scanner = new Scanner(System.in);
         int askUserNumber = scanner.nextInt();
         logger.log(String.valueOf(askUserNumber));
