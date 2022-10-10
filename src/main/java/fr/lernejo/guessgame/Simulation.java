@@ -27,7 +27,7 @@ public class Simulation {
     /**
      * @return true if the player have guessed the right number
      */
-    private boolean nextRound(int i) {
+    private boolean nextRound() {
 
         /*
         System.out.println("Enter a number : ");
@@ -38,7 +38,6 @@ public class Simulation {
         long computerChoice = player.askNextGuess();
         if(computerChoice == numberToGuess) {
             logger.log("win");
-            logger.log("Number of tries -> " + count);
             return true;
         }
         else {
@@ -53,7 +52,7 @@ public class Simulation {
         long timeExec = 0;
         long startT = System.currentTimeMillis();
         do {
-            game = nextRound(count);
+            game = nextRound();
             count++;
         } while(!game && count<maxValue);
         long endT = System.currentTimeMillis();
