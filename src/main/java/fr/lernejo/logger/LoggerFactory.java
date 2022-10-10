@@ -1,7 +1,10 @@
 package fr.lernejo.logger;
 
+import java.awt.*;
+
 public class LoggerFactory {
     public static Logger getLogger(String name) {
-        return new ConsoleLogger();
+        Logger logger = new ContextualLogger(name, new FileLogger("log.txt"));
+        return logger;
     }
 }
